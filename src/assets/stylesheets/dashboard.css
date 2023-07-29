@@ -1,0 +1,18 @@
+.dashboard-container {
+  width: 98%;
+  padding: 1%;
+}
+.dashboard {
+  height: 100%;
+  background-color: slategrey;
+  display: flex;
+  flex-direction: row;
+}
+.side-menu {
+  /* padding: .5em 1em; */
+  text-align: center;
+}
+.s-list {
+  list-style: none;
+  padding: 0;
+}
