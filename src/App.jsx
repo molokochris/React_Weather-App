@@ -9,7 +9,11 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [location, setLocation] = useState(null);
-  const [weather, setWeather] = useState(localStorage.getItem("weather"));
+  const [weather, setWeather] = useState(
+    JSON.parse(localStorage.getItem("weather"))
+  );
+  // const [weather, setWeather] = useState("");
+
   const apiKey = "3021580a31e6c76b379d08b7a93f24cc";
   const days = [
     "Monday",
@@ -51,6 +55,7 @@ function App() {
 
         // Save the weather forecast to local storage
         localStorage.setItem("weather", JSON.stringify(data));
+        console.log(data)
       })
       .catch((error) => console.error("Error fetching data:", error));
   };
