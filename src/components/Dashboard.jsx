@@ -12,10 +12,10 @@ import { WiCloud, WiStormShowers } from "react-icons/wi";
 import WeatherIcons from "./WeatherIcons";
 
 export default function Dashboard(props) {
-  const { list } = props.weather;
+  const { list, city } = props.weather;
   const dayNight = list[0].sys.pod == "d";
   const code = list[0].weather[0].id;
-  console.log(list[0]);
+  console.log(list, city);
 
   return (
     <div className="dashboard-container">
@@ -60,16 +60,20 @@ export default function Dashboard(props) {
             <div className="col-1">
               <div className="main-info">
                 <i className="wi wi-day-sunny img"></i>
-                <span className="temp">28&deg;C</span>
+                <span className="temp">{Math.floor(list[0].main.temp)}&deg;C</span>
                 <div className="i-sp">
                   <WiStormShowers style={{ fontSize: "xx-large" }} />
-                  <span style={{ fontSize: "medium" }}>Rainy Storm Clouds</span>
+                  <span style={{ fontSize: "medium" }}>
+                    {list[0].weather[0].description}
+                  </span>
                 </div>
               </div>
               <div className="extra-info">
                 <div className="i-sp">
                   <LiaMapPinSolid className="icons" />
-                  <span>Polokwane, SA</span>
+                  <span>
+                    {city.name}, {city.country}
+                  </span>
                 </div>
                 <div className="i-sp">
                   <SlCalender className="icons" />
