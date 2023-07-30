@@ -70,14 +70,16 @@
   display: flex;
   flex-direction: column;
   border-bottom: 0.1em solid rgba(99, 99, 99, 0.5);
-  /* height: 80%; */
+  height: 80%;
   padding: 2%;
 }
 .main-info .img {
-  text-align: center;
-  /* height: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
   width: fit-content;
-  font-size: 500%;
+  font-size: 550%;
   padding: 1%;
 }
 .temp {
@@ -98,7 +100,7 @@
   font-size: larger;
 }
 .extra-info {
-  /* height: 20%; */
+  height: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
