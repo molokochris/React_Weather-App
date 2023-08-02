@@ -55,6 +55,7 @@ function App() {
 
         // Save the weather forecast to local storage
         localStorage.setItem("weather", JSON.stringify(data));
+	window.location.reload();
         console.log(data)
       })
       .catch((error) => console.error("Error fetching data:", error));
