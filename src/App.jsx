@@ -33,10 +33,36 @@ function App() {
   const [storage, setStorage] = useState("");
 
   useEffect(() => {
-    if (window.localStorage) {
+    const handleBeforeUnload = () => {
+      // Run the getLocation function when the page is being unloaded (refreshed)
+      getLocation();
+    };
+
+    // Add the event listener to the 'beforeunload' event
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
+
+  // const setStorage = () => {
+  //   // Your setStorage function implementation
+  //   // This is not shown in the provided code, so make sure it's defined somewhere
+  // };
+
+  useEffect(() => {
+    // Check if it's the first load, set the flag in local storage to true, and reload the page
+    if (localStorage.getItem("firstLoadDone") === null) {
       setStorage();
+      localStorage.setItem("firstLoadDone", "true");
+      console.log("This is the initial load");
+      window.location.reload(); // Reload the page after setting the flag
+    } else {
+      console.log("This is a page refresh");
     }
-  });
+  }, []);
 
   // console.log(localStorage.getItem("weather"));
   const success = (position) => {

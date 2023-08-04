@@ -47,12 +47,18 @@
 }
 .forecast h1 {
   font-size: 4em;
+  /* display: flex;
+  justify-content: center; */
 }
 .forecast h4 {
   font-size: 0.6em;
 }
 .forecast h6 {
   font-size: 0.6em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .day-forecast {
   width: 100%;
