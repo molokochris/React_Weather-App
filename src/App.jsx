@@ -32,6 +32,12 @@ function App() {
 
   const [storage, setStorage] = useState("");
 
+  // useEffect(() => {
+  //   if (localStorage.getItem("weather")) {
+  //     setStorage();
+  //   }
+  // });
+
   useEffect(() => {
     const handleBeforeUnload = () => {
       // Run the getLocation function when the page is being unloaded (refreshed)
