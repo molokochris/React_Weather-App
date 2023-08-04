@@ -1,0 +1,33 @@
+.dashboard-container {
+    height: 100vh;
+}
+.image-container {
+    background-image: url(/public/background.jpg);
+    height: 100%;
+    filter: blur(2px);
+}
+.info-container {
+    position: absolute;
+    /* background-color: red; */
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.current {
+    width: 50%;
+}
+.logo {
+    /* background-color: red; */
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+}
+.logo img {
+    width: 10%;
+}
+.more-info {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
