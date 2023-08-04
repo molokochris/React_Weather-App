@@ -1,15 +1,24 @@
 .locator {
   height: 100vh;
+  /* text-align: center; */
   /* background-color: red; */
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
+}
+.site-logo {
+    /* width: 30%; */
+    width: 15%;
+    margin-bottom: 15%;
+    margin-top: 5%;
 }
 .locator span {
     background-color: whitesmoke;
     color: black;
-    margin: 5%;
+    text-align: center;
+    margin-bottom: 5%;
+    /* width: 100%; */
     padding: 1%;
 }
 .getLocation {

@@ -1,7 +1,7 @@
 .dashboard-container {
   height: 100vh;
   /* overflow: visible; */
-  font-family: 'Inter', "Courier New", Courier, monospace;
+  font-family: "Inter", "Courier New", Courier, monospace;
 }
 .image-container {
   background-image: url(/public/background.jpg);
@@ -26,6 +26,8 @@
 }
 .logo {
   /* background-color: red; */
+  width: 100%;
+  justify-content: center;
   padding: 1%;
   display: flex;
   flex-direction: row;
@@ -36,6 +38,7 @@
   width: 20%;
 }
 .forecast {
+  text-align: center;
   /* height: 60%; */
   font-size: x-large;
 }
@@ -69,35 +72,35 @@
   width: 40px;
 }
 .more-info {
-    padding: 2%;
+  padding: 2%;
   width: 48%;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
 }
 .main {
-    background-color: rgba(0, 0, 0, .3);
-    width: 90%;
-    height: 20%;
-    border-radius: 10px;
-    padding: 2%;
-    margin-bottom: 2%;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 90%;
+  height: 20%;
+  border-radius: 10px;
+  padding: 2%;
+  margin-bottom: 2%;
 }
 .main-extra {
-    background-color: rgba(0, 0, 0, .3);
-    width: 90%;
-    height: 45%;
-    border-radius: 10px;
-    padding: 2%;
-    margin-bottom: 2%;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 90%;
+  height: 45%;
+  border-radius: 10px;
+  padding: 2%;
+  margin-bottom: 2%;
 }
 .wind {
-    background-color: rgba(0, 0, 0, .3);
-    width: 90%;
-    height: 35%;
-    border-radius: 10px;
-    padding: 2%;
-    margin-bottom: 2%;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 90%;
+  height: 35%;
+  border-radius: 10px;
+  padding: 2%;
+  margin-bottom: 2%;
 }

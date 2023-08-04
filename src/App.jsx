@@ -6,11 +6,13 @@ import CurrentLocation from "./assets/images/navigation.png";
 import { useNavigate } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import { useEffect, useState } from "react";
+import logo from "../public/skybits.png";
 
 function App() {
   const [location, setLocation] = useState(null);
   const [weather, setWeather] = useState(
-    JSON.parse(localStorage.getItem("weather"))
+    ""
+    // JSON.parse(localStorage.getItem("weather"))
   );
   // const [weather, setWeather] = useState("");
 
@@ -55,8 +57,8 @@ function App() {
 
         // Save the weather forecast to local storage
         localStorage.setItem("weather", JSON.stringify(data));
-	window.location.reload();
-        console.log(data)
+        window.location.reload();
+        console.log(data);
       })
       .catch((error) => console.error("Error fetching data:", error));
   };
@@ -77,7 +79,7 @@ function App() {
         <Dashboard weather={weather} />
       ) : (
         <div className="locator">
-          <h1 className="">Snap.Plan.Prepare</h1>
+          <img src={logo} alt="" className="site-logo" />
           <span>Let us take a snap of your location</span>
           <div className="getLocation">
             <img src={CurrentLocation} alt="" onClick={getLocation} />
