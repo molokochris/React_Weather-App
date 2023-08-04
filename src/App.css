@@ -107,6 +107,11 @@
   padding: 2%;
   margin-bottom: 2%;
 }
+p {
+    height: fit-content;
+    text-decoration: burlywood;
+    font-size: small;
+}
 
 
 /* other screeens */

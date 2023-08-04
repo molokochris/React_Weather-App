@@ -13,7 +13,7 @@ import WeatherIcons from "./WeatherIcons";
 // import logo from '../../public/SkyBits.png'
 import logo from "../../public/Logo PNG.png";
 import { Link } from "react-router-dom";
-import xlogo from '../../public/skybits.png'
+import xlogo from "../../public/skybits.png";
 
 export default function Dashboard(props) {
   const { list, city } = props.weather;
@@ -111,9 +111,15 @@ export default function Dashboard(props) {
           </div>
         </div>
       </div>
-      <p style={{textAlign:"center", height:"fit-content"}}>
-        UI designed by https://www.behance.net/6133cf01 & coded by Moloko Chris
-        Poopedi
+      <p style={{ textAlign: "center", height: "fit-content" }}>
+        UI designed/Inspired by{" "}
+        <a href="https://www.behance.net/6133cf01" target="_blank">
+          Maria
+        </a>{" "}
+        & coded by{" "}
+        <a href="https://www.linkedin.com/in/molokochris" target="_blank">
+          Moloko Chris Poopedi
+        </a>
       </p>
     </>
   );
