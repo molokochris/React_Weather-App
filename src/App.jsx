@@ -11,8 +11,7 @@ import logo from "../public/skybits.png";
 function App() {
   const [location, setLocation] = useState(null);
   const [weather, setWeather] = useState(
-    ""
-    // JSON.parse(localStorage.getItem("weather"))
+    JSON.parse(localStorage.getItem("weather"))
   );
   // const [weather, setWeather] = useState("");
 
