@@ -80,7 +80,13 @@ export default function Dashboard(props) {
                 {city.name}, {city.country}
               </h4>
               {/* <br /> */}
-              <h6 className="description">{list[0].weather[0].description}</h6>
+              <h6 className="description">
+                <img
+                  src={`https://openweathermap.org/img/w/${list[0].weather[0].icon}.png`}
+                  alt=""
+                />
+                {list[0].weather[0].description}
+              </h6>
               <div className="day-forecast">
                 {/* <div className="hour">
                 <h6>1</h6>
@@ -94,7 +100,10 @@ export default function Dashboard(props) {
                     <div className="hour">
                       <h6>{list[index].dt_txt[11] + list[index].dt_txt[12]}</h6>
                       <span>
-                        <img src={logo} alt="" />
+                        <img
+                          src={`https://openweathermap.org/img/w/${list[index].weather[0].icon}.png`}
+                          alt=""
+                        />
                       </span>
                       <h6>{Math.floor(list[index].main.temp)}&deg;</h6>
                     </div>

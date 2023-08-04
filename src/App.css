@@ -129,10 +129,12 @@ p {
     }
     .current {
         width: 96%;
+        font-size: larger;
     }
     .more-info {
         width: 96%;
         height: max-content;
+        font-size: larger;
     }
     .day-forecast {
         justify-content: center;
@@ -140,6 +142,7 @@ p {
         height: fit-content;
         padding: 1%;
         width: 98%;
+        font-size: larger;
     }
     .hour {
         width: 14%;
