@@ -15,6 +15,7 @@ function App() {
   );
   // const [weather, setWeather] = useState("");
 
+  
   const apiKey = "3021580a31e6c76b379d08b7a93f24cc";
   const days = [
     "Monday",
@@ -26,6 +27,8 @@ function App() {
     "Sunday",
   ];
   const today = new Date();
+
+  console.log(process.env.REACT_APP_API_KEY);
 
   console.log(days[today.getDay() - 1]);
   // const navigate = useNavigate();
