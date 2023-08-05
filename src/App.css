@@ -50,6 +50,7 @@
   border: none;
   border-radius: 8px 0 0 8px;
   background-color: rgba(0, 0, 0, .8);
+  outline: none;
 }
 .search input:active {
   border: none;

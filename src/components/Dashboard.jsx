@@ -11,8 +11,9 @@ export default function Dashboard(props) {
   const dayNight = list[0].sys.pod == "d";
   const code = list[0].weather[0].id;
   const [showModal, setShowModal] = useState(false);
+  const [location, setLocation] = useState("");
 
-  console.log(list, city);
+  // console.log(list, city);
 
   // fill empty array
   const array = [
@@ -55,7 +56,7 @@ export default function Dashboard(props) {
   ];
   // let index = 0;
 
-  console.log();
+  // console.log(location);
 
   return (
     <>
@@ -68,7 +69,11 @@ export default function Dashboard(props) {
               {/* <img src={logo} alt="" /> */}
             </div>
             <div className="search">
-              <input type="text" placeholder="search your city" />
+              <input
+                type="text"
+                placeholder="search your city"
+                onChange={(e) => setLocation(e.target.value)}
+              />
               <button>
                 <FiSearch />
               </button>
