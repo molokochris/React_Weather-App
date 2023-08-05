@@ -10,7 +10,6 @@ export default function Dashboard(props) {
   const { list, city } = props.weather;
   const dayNight = list[0].sys.pod == "d";
   const code = list[0].weather[0].id;
-  const [showModal, setShowModal] = useState(false);
   const [location, setLocation] = useState("");
 
   // console.log(list, city);
@@ -134,15 +133,6 @@ export default function Dashboard(props) {
           Moloko Chris Poopedi
         </a>
       </p>
-      {showModal && (
-        <div className="modal">
-          <div className="m-content">
-            <CgClose onClick={setShowModal(false)} />
-            <input type="text" placeholder="search your location" />
-            <LiaSearchPlusSolid size="2em" />
-          </div>
-        </div>
-      )}
     </>
   );
 }
