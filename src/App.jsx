@@ -28,7 +28,7 @@ function App() {
   ];
   const today = new Date();
 
-  console.log(process.env.REACT_APP_API_KEY);
+  // console.log(process.env.REACT_APP_API_KEY);
 
   console.log(days[today.getDay() - 1]);
   // const navigate = useNavigate();

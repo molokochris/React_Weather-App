@@ -1,24 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/stylesheets/dashboard.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarDays, faMap } from "@fortawesome/free-regular-svg-icons";
-import { BsGear } from "react-icons/bs";
-import { GiNestedEclipses } from "react-icons/gi";
-import { SlCalender } from "react-icons/sl";
-import { FaCloudsmith } from "react-icons/fa";
-import { LiaMapSolid, LiaMapPinSolid } from "react-icons/lia";
-import { RiApps2Line } from "react-icons/ri";
-import { WiCloud, WiStormShowers } from "react-icons/wi";
-import WeatherIcons from "./WeatherIcons";
-// import logo from '../../public/SkyBits.png'
-import logo from "../../public/Logo PNG.png";
-import { Link } from "react-router-dom";
+import { LiaSearchPlusSolid } from "react-icons/lia";
+import { FiSearch } from "react-icons/fi";
+import { CgClose } from "react-icons/cg";
 import xlogo from "../../public/skybits.png";
+import Modal from "./Modal";
 
 export default function Dashboard(props) {
   const { list, city } = props.weather;
   const dayNight = list[0].sys.pod == "d";
   const code = list[0].weather[0].id;
+  const [showModal, setShowModal] = useState(false);
+
   console.log(list, city);
 
   // fill empty array
@@ -73,6 +66,12 @@ export default function Dashboard(props) {
             <div className="logo">
               <img src={xlogo} alt="" />
               {/* <img src={logo} alt="" /> */}
+            </div>
+            <div className="search">
+              <input type="text" placeholder="search your city" />
+              <button>
+                <FiSearch />
+              </button>
             </div>
             <div className="forecast">
               <h1>{Math.floor(list[0].main.temp)}&deg;</h1>
@@ -130,6 +129,15 @@ export default function Dashboard(props) {
           Moloko Chris Poopedi
         </a>
       </p>
+      {showModal && (
+        <div className="modal">
+          <div className="m-content">
+            <CgClose onClick={setShowModal(false)} />
+            <input type="text" placeholder="search your location" />
+            <LiaSearchPlusSolid size="2em" />
+          </div>
+        </div>
+      )}
     </>
   );
 }
