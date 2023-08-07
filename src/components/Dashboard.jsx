@@ -74,7 +74,7 @@ export default function Dashboard(props) {
                 onChange={(e) => setLocation(e.target.value)}
               />
               <button>
-                <FiSearch />
+                <FiSearch color="whitesmoke" />
               </button>
             </div>
             <div className="forecast">
