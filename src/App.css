@@ -51,6 +51,7 @@
   border-radius: 8px 0 0 8px;
   background-color: rgba(0, 0, 0, .8);
   outline: none;
+  color: whitesmoke;
 }
 .search input:active {
   border: none;
